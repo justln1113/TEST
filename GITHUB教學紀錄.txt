@@ -5,3 +5,4 @@ https://git-scm.com/book/zh-tw/v2/GitHub-%E5%8F%83%E8%88%87%E4%B8%80%E5%80%8B%E5
 http://blog.kevinlinul.idv.tw/?p=369
 https://medium.com/kuma%E8%80%81%E5%B8%AB%E7%9A%84%E8%BB%9F%E9%AB%94%E5%B7%A5%E7%A8%8B%E6%95%99%E5%AE%A4/%E5%9F%BA%E7%A4%8E-git-flow-%E5%B7%A5%E4%BD%9C%E6%B3%95-fa50b1dddc4f
 https://tech.hahow.in/%E5%A6%82%E4%BD%95%E8%87%AA%E5%8B%95%E5%8C%96-github-releases-%E6%B5%81%E7%A8%8B-6e7e33b61169
+https://medium.com/@trylovetom/%E8%AE%93%E6%88%91%E5%80%91%E4%BE%86%E4%BA%86%E8%A7%A3-github-flow-%E5%90%A7-4144caf1f1bf
