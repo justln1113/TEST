@@ -1,0 +1,2 @@
+pjs.zip filter=lfs diff=lfs merge=lfs -text
+PJS_corpus_ver1.1.zip filter=lfs diff=lfs merge=lfs -text
