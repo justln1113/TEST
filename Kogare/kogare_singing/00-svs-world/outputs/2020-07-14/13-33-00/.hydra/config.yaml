@@ -1,0 +1,6 @@
+list_path: train_list.txt
+out_path: dump/kogare/org/in_acoustic_scaler.joblib
+scaler:
+  class: sklearn.preprocessing.MinMaxScaler
+  params: {}
+verbose: 100

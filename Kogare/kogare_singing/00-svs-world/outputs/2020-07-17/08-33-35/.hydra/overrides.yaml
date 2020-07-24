@@ -1,0 +1,3 @@
+- in_dir=dump/kogare/org/dev/in_acoustic/
+- scaler_path=dump/kogare/org/in_acoustic_scaler.joblib
+- out_dir=dump/kogare/norm/dev/in_acoustic/

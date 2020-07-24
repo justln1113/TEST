@@ -1,0 +1,8 @@
+[2020-07-15 10:36:05,204][nnsvs][INFO] - in_dir: dump/kogare/norm/dev/in_timelag/
+model:
+  checkpoint: exp/kogare/timelag/latest.pth
+  model_yaml: exp/kogare/timelag/model.yaml
+out_dir: exp/kogare/timelag/predicted/dev/latest/
+out_scaler_path: dump/kogare/norm/out_timelag_scaler.joblib
+verbose: 100
+

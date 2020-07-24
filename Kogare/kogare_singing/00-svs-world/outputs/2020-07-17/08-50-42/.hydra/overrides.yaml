@@ -1,0 +1,5 @@
+- model.checkpoint=exp/kogare/duration/latest.pth
+- model.model_yaml=exp/kogare/duration/model.yaml
+- out_scaler_path=dump/kogare/norm/out_duration_scaler.joblib
+- in_dir=dump/kogare/norm/dev/in_duration/
+- out_dir=exp/kogare/duration/predicted/dev/latest/

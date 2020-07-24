@@ -1,0 +1,5 @@
+- model.checkpoint=exp/kogare/acoustic/latest.pth
+- model.model_yaml=exp/kogare/acoustic/model.yaml
+- out_scaler_path=dump/kogare/norm/out_acoustic_scaler.joblib
+- in_dir=dump/kogare/norm/eval/in_acoustic/
+- out_dir=exp/kogare/acoustic/predicted/eval/latest/

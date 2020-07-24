@@ -1,0 +1,8 @@
+[2020-07-14 15:41:10,755][nnsvs][INFO] - in_dir: dump/kogare/norm/eval/in_acoustic/
+model:
+  checkpoint: exp/kogare/acoustic/latest.pth
+  model_yaml: exp/kogare/acoustic/model.yaml
+out_dir: exp/kogare/acoustic/predicted/eval/latest/
+out_scaler_path: dump/kogare/norm/out_acoustic_scaler.joblib
+verbose: 100
+

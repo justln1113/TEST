@@ -1,0 +1,51 @@
+cudnn:
+  benchmark: false
+  deterministic: false
+data:
+  batch_size: 8
+  dev:
+    in_dir: dump/kogare/norm/dev/in_timelag/
+    out_dir: dump/kogare/norm/dev/out_timelag/
+  num_workers: 2
+  pin_memory: true
+  train_no_dev:
+    in_dir: dump/kogare/norm/train_no_dev/in_timelag/
+    out_dir: dump/kogare/norm/train_no_dev/out_timelag/
+model:
+  has_dynamic_features:
+  - false
+  netG:
+    class: nnsvs.model.FeedForwardNet
+    params:
+      dropout: 0.5
+      hidden_dim: 128
+      in_dim: 420
+      num_layers: 2
+      out_dim: 1
+  stream_sizes:
+  - 1
+  stream_weights:
+  - 1
+optim:
+  lr_scheduler:
+    name: StepLR
+    params:
+      gamma: 0.5
+      step_size: 20
+  optimizer:
+    name: Adam
+    params:
+      betas:
+      - 0.5
+      - 0.999
+      lr: 0.001
+      weight_decay: 0.0
+resume:
+  checkpoint: exp/kogare/timelag/latest.pth
+  load_optimizer: false
+train:
+  checkpoint_epoch_interval: 20
+  nepochs: 50
+  out_dir: exp/kogare/timelag
+  stream_wise_loss: false
+verbose: 100

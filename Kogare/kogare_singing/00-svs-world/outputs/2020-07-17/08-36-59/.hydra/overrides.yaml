@@ -1,0 +1,17 @@
+- question_path=conf/jp_qst001_nnsvs.hed
+- timelag.checkpoint=exp/kogare/timelag/latest.pth
+- timelag.in_scaler_path=dump/kogare/norm/in_timelag_scaler.joblib
+- timelag.out_scaler_path=dump/kogare/norm/out_timelag_scaler.joblib
+- timelag.model_yaml=exp/kogare/timelag/model.yaml
+- duration.checkpoint=exp/kogare/duration/latest.pth
+- duration.in_scaler_path=dump/kogare/norm/in_duration_scaler.joblib
+- duration.out_scaler_path=dump/kogare/norm/out_duration_scaler.joblib
+- duration.model_yaml=exp/kogare/duration/model.yaml
+- acoustic.checkpoint=exp/kogare/acoustic/latest.pth
+- acoustic.in_scaler_path=dump/kogare/norm/in_acoustic_scaler.joblib
+- acoustic.out_scaler_path=dump/kogare/norm/out_acoustic_scaler.joblib
+- acoustic.model_yaml=exp/kogare/acoustic/model.yaml
+- utt_list=./data/list/eval.list
+- in_dir=data/acoustic/label_phone_score/
+- out_dir=exp/kogare/synthesis/eval/latest/label_phone_score
+- ground_truth_duration=false

@@ -1,0 +1,5 @@
+- utt_list=data/list/train_no_dev.list
+- out_dir=dump/kogare/org/train_no_dev/
+- question_path=./conf/jp_qst001_nnsvs.hed
+- acoustic.f0_floor=90
+- acoustic.f0_ceil=650

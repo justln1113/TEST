@@ -1,0 +1,28 @@
+acoustic:
+  enabled: true
+  f0_ceil: 650
+  f0_floor: 90
+  frame_period: 5
+  interp_unvoiced_aperiodicity: true
+  label_dir: data/acoustic/label_phone_align
+  mgc_order: 59
+  num_windows: 3
+  question_path: null
+  relative_f0: true
+  subphone_features: coarse_coding
+  use_harvest: true
+  wav_dir: data/acoustic/wav
+duration:
+  enabled: true
+  label_dir: data/duration/label_phone_align
+  question_path: null
+log_f0_conditioning: true
+out_dir: dump/kogare/org/eval/
+question_path: ./conf/jp_qst001_nnsvs.hed
+timelag:
+  enabled: true
+  label_phone_align_dir: data/timelag/label_phone_align
+  label_phone_score_dir: data/timelag/label_phone_score
+  question_path: null
+utt_list: data/list/eval.list
+verbose: 100

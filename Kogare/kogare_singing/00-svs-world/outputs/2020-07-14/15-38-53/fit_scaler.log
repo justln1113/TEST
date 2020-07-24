@@ -1,0 +1,11 @@
+[2020-07-14 15:38:53,584][nnsvs][INFO] - list_path: train_list.txt
+out_path: dump/kogare/org/out_duration_scaler.joblib
+scaler:
+  class: sklearn.preprocessing.StandardScaler
+  params: {}
+verbose: 100
+
+[2020-07-14 15:38:53,688][nnsvs][INFO] - mean:
+[100.8172043]
+[2020-07-14 15:38:53,689][nnsvs][INFO] - std:
+[111.31845286]

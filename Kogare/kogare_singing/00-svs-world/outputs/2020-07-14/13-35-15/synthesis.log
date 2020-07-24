@@ -1,0 +1,60 @@
+[2020-07-14 13:35:15,112][nnsvs][INFO] - acoustic:
+  checkpoint: exp/kogare/acoustic/latest.pth
+  has_dynamic_features:
+  - true
+  - true
+  - false
+  - true
+  in_scaler_path: dump/kogare/norm/in_acoustic_scaler.joblib
+  model_yaml: exp/kogare/acoustic/model.yaml
+  num_windows: 3
+  out_scaler_path: dump/kogare/norm/out_acoustic_scaler.joblib
+  post_filter: true
+  question_path: null
+  relative_f0: true
+  stream_sizes:
+  - 180
+  - 3
+  - 1
+  - 15
+  subphone_features: coarse_coding
+device: cuda
+duration:
+  checkpoint: exp/kogare/duration/latest.pth
+  has_dynamic_features:
+  - false
+  in_scaler_path: dump/kogare/norm/in_duration_scaler.joblib
+  model_yaml: exp/kogare/duration/model.yaml
+  out_scaler_path: dump/kogare/norm/out_duration_scaler.joblib
+  question_path: null
+  stream_sizes:
+  - 1
+frame_period: 5
+ground_truth_duration: false
+in_dir: data/acoustic/label_phone_score/
+label_path: null
+log_f0_conditioning: true
+out_dir: exp/kogare/synthesis/dev/latest/label_phone_score
+out_wav_path: null
+question_path: conf/jp_qst001_nnsvs.hed
+sample_rate: 48000
+timelag:
+  allowed_range:
+  - -20
+  - 20
+  allowed_range_rest:
+  - -40
+  - 40
+  checkpoint: exp/kogare/timelag/latest.pth
+  has_dynamic_features:
+  - false
+  in_scaler_path: dump/kogare/norm/in_timelag_scaler.joblib
+  model_yaml: exp/kogare/timelag/model.yaml
+  out_scaler_path: dump/kogare/norm/out_timelag_scaler.joblib
+  question_path: null
+  stream_sizes:
+  - 1
+utt_list: ./data/list/dev.list
+verbose: 100
+
+[2020-07-14 13:35:17,473][nnsvs][INFO] - Processes 1 utterances...

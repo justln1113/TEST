@@ -1,0 +1,8 @@
+[2020-07-14 08:44:33,722][nnsvs][INFO] - in_dir: dump/kogare/norm/eval/in_duration/
+model:
+  checkpoint: exp/kogare/duration/latest.pth
+  model_yaml: exp/kogare/duration/model.yaml
+out_dir: exp/kogare/duration/predicted/eval/latest/
+out_scaler_path: dump/kogare/norm/out_duration_scaler.joblib
+verbose: 100
+

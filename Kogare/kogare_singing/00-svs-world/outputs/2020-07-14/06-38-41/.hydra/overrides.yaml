@@ -1,0 +1,8 @@
+- model=timelag
+- data.train_no_dev.in_dir=dump/kogare/norm/train_no_dev/in_timelag/
+- data.train_no_dev.out_dir=dump/kogare/norm/train_no_dev/out_timelag/
+- data.dev.in_dir=dump/kogare/norm/dev/in_timelag/
+- data.dev.out_dir=dump/kogare/norm/dev/out_timelag/
+- train.out_dir=exp/kogare/timelag
+- data.batch_size=8
+- resume.checkpoint=exp/kogare/timelag/latest.pth

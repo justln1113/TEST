@@ -1,0 +1,3 @@
+- list_path=train_list.txt
+- scaler.class=sklearn.preprocessing.MinMaxScaler
+- out_path=dump/kogare/org/in_timelag_scaler.joblib

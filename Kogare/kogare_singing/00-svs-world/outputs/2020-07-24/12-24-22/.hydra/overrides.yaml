@@ -1,0 +1,8 @@
+- model=duration
+- data.train_no_dev.in_dir=dump/kogare/norm/train_no_dev/in_duration/
+- data.train_no_dev.out_dir=dump/kogare/norm/train_no_dev/out_duration/
+- data.dev.in_dir=dump/kogare/norm/dev/in_duration/
+- data.dev.out_dir=dump/kogare/norm/dev/out_duration/
+- train.out_dir=exp/kogare/duration
+- data.batch_size=8
+- resume.checkpoint=#exp/kogare/duration/latest.pth

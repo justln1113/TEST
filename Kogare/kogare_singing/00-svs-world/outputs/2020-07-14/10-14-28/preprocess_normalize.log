@@ -1,0 +1,7 @@
+[2020-07-14 10:14:29,034][nnsvs][INFO] - in_dir: dump/kogare/org/eval/out_acoustic/
+inverse: false
+num_workers: 4
+out_dir: dump/kogare/norm/eval/out_acoustic/
+scaler_path: dump/kogare/org/out_acoustic_scaler.joblib
+verbose: 100
+

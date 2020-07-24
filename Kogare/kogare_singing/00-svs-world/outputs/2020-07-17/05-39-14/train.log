@@ -1,0 +1,170 @@
+[2020-07-17 05:39:15,022][nnsvs][INFO] - cudnn:
+  benchmark: false
+  deterministic: false
+data:
+  batch_size: 8
+  dev:
+    in_dir: dump/kogare/norm/dev/in_timelag/
+    out_dir: dump/kogare/norm/dev/out_timelag/
+  num_workers: 2
+  pin_memory: true
+  train_no_dev:
+    in_dir: dump/kogare/norm/train_no_dev/in_timelag/
+    out_dir: dump/kogare/norm/train_no_dev/out_timelag/
+model:
+  has_dynamic_features:
+  - false
+  netG:
+    class: nnsvs.model.FeedForwardNet
+    params:
+      dropout: 0.5
+      hidden_dim: 128
+      in_dim: 420
+      num_layers: 2
+      out_dim: 1
+  stream_sizes:
+  - 1
+  stream_weights:
+  - 1
+optim:
+  lr_scheduler:
+    name: StepLR
+    params:
+      gamma: 0.5
+      step_size: 20
+  optimizer:
+    name: Adam
+    params:
+      betas:
+      - 0.5
+      - 0.999
+      lr: 0.001
+      weight_decay: 0.0
+resume:
+  checkpoint: null
+  load_optimizer: false
+train:
+  checkpoint_epoch_interval: 20
+  nepochs: 50
+  out_dir: exp/kogare/timelag
+  stream_wise_loss: false
+verbose: 100
+
+[2020-07-17 05:39:15,023][nnsvs][INFO] - cudnn.deterministic: False
+[2020-07-17 05:39:15,024][nnsvs][INFO] - cudnn.benchmark: False
+[2020-07-17 05:39:23,681][nnsvs][INFO] - torch.Size([8, 9, 420]), torch.Size([8, 9, 1]), torch.Size([8])
+[2020-07-17 05:39:23,683][nnsvs][INFO] - torch.Size([8, 7, 420]), torch.Size([8, 7, 1]), torch.Size([8])
+[2020-07-17 05:39:23,689][nnsvs][INFO] - torch.Size([8, 7, 420]), torch.Size([8, 7, 1]), torch.Size([8])
+[2020-07-17 05:39:23,689][nnsvs][INFO] - torch.Size([8, 7, 420]), torch.Size([8, 7, 1]), torch.Size([8])
+[2020-07-17 05:39:23,719][nnsvs][INFO] - torch.Size([7, 7, 420]), torch.Size([7, 7, 1]), torch.Size([7])
+[2020-07-17 05:39:23,785][nnsvs][INFO] - torch.Size([1, 7, 420]), torch.Size([1, 7, 1]), torch.Size([1])
+[2020-07-17 05:39:25,583][nnsvs][INFO] - Start utterance-wise training...
+[2020-07-17 05:39:25,939][nnsvs][INFO] - [train_no_dev] [Epoch 1]: loss 0.9974517345428466
+[2020-07-17 05:39:26,014][nnsvs][INFO] - [dev] [Epoch 1]: loss 0.5678420066833496
+[2020-07-17 05:39:26,623][nnsvs][INFO] - [Best loss 0.5678420066833496: checkpoint is saved at /content/drive/Shared drives/台U/NNSVS/Training_data/Kogare/kogare_singing/00-svs-world/exp/kogare/timelag/best_loss.pth
+[2020-07-17 05:39:26,877][nnsvs][INFO] - [train_no_dev] [Epoch 2]: loss 1.00108642578125
+[2020-07-17 05:39:26,947][nnsvs][INFO] - [dev] [Epoch 2]: loss 0.5676778554916382
+[2020-07-17 05:39:26,963][nnsvs][INFO] - [Best loss 0.5676778554916382: checkpoint is saved at /content/drive/Shared drives/台U/NNSVS/Training_data/Kogare/kogare_singing/00-svs-world/exp/kogare/timelag/best_loss.pth
+[2020-07-17 05:39:27,201][nnsvs][INFO] - [train_no_dev] [Epoch 3]: loss 1.0011282801628112
+[2020-07-17 05:39:27,282][nnsvs][INFO] - [dev] [Epoch 3]: loss 0.5636308789253235
+[2020-07-17 05:39:27,306][nnsvs][INFO] - [Best loss 0.5636308789253235: checkpoint is saved at /content/drive/Shared drives/台U/NNSVS/Training_data/Kogare/kogare_singing/00-svs-world/exp/kogare/timelag/best_loss.pth
+[2020-07-17 05:39:27,548][nnsvs][INFO] - [train_no_dev] [Epoch 4]: loss 0.9679677248001098
+[2020-07-17 05:39:27,754][nnsvs][INFO] - [dev] [Epoch 4]: loss 0.5716966986656189
+[2020-07-17 05:39:27,994][nnsvs][INFO] - [train_no_dev] [Epoch 5]: loss 0.963965904712677
+[2020-07-17 05:39:28,064][nnsvs][INFO] - [dev] [Epoch 5]: loss 0.5585611462593079
+[2020-07-17 05:39:28,080][nnsvs][INFO] - [Best loss 0.5585611462593079: checkpoint is saved at /content/drive/Shared drives/台U/NNSVS/Training_data/Kogare/kogare_singing/00-svs-world/exp/kogare/timelag/best_loss.pth
+[2020-07-17 05:39:28,323][nnsvs][INFO] - [train_no_dev] [Epoch 6]: loss 0.9077824473381042
+[2020-07-17 05:39:28,393][nnsvs][INFO] - [dev] [Epoch 6]: loss 0.555372416973114
+[2020-07-17 05:39:28,409][nnsvs][INFO] - [Best loss 0.555372416973114: checkpoint is saved at /content/drive/Shared drives/台U/NNSVS/Training_data/Kogare/kogare_singing/00-svs-world/exp/kogare/timelag/best_loss.pth
+[2020-07-17 05:39:28,644][nnsvs][INFO] - [train_no_dev] [Epoch 7]: loss 0.8966865956783294
+[2020-07-17 05:39:28,726][nnsvs][INFO] - [dev] [Epoch 7]: loss 0.593394935131073
+[2020-07-17 05:39:28,967][nnsvs][INFO] - [train_no_dev] [Epoch 8]: loss 0.8841369032859803
+[2020-07-17 05:39:29,040][nnsvs][INFO] - [dev] [Epoch 8]: loss 0.6167678236961365
+[2020-07-17 05:39:29,340][nnsvs][INFO] - [train_no_dev] [Epoch 9]: loss 0.829345828294754
+[2020-07-17 05:39:29,412][nnsvs][INFO] - [dev] [Epoch 9]: loss 0.6352918148040771
+[2020-07-17 05:39:29,642][nnsvs][INFO] - [train_no_dev] [Epoch 10]: loss 0.8032050251960754
+[2020-07-17 05:39:29,711][nnsvs][INFO] - [dev] [Epoch 10]: loss 0.7809982895851135
+[2020-07-17 05:39:29,950][nnsvs][INFO] - [train_no_dev] [Epoch 11]: loss 0.8268004894256592
+[2020-07-17 05:39:30,026][nnsvs][INFO] - [dev] [Epoch 11]: loss 0.6843935251235962
+[2020-07-17 05:39:30,284][nnsvs][INFO] - [train_no_dev] [Epoch 12]: loss 0.7492294073104858
+[2020-07-17 05:39:30,356][nnsvs][INFO] - [dev] [Epoch 12]: loss 0.7128711938858032
+[2020-07-17 05:39:30,596][nnsvs][INFO] - [train_no_dev] [Epoch 13]: loss 0.7225952744483948
+[2020-07-17 05:39:30,671][nnsvs][INFO] - [dev] [Epoch 13]: loss 0.7357375621795654
+[2020-07-17 05:39:30,899][nnsvs][INFO] - [train_no_dev] [Epoch 14]: loss 0.7044997453689575
+[2020-07-17 05:39:30,976][nnsvs][INFO] - [dev] [Epoch 14]: loss 0.814292848110199
+[2020-07-17 05:39:31,250][nnsvs][INFO] - [train_no_dev] [Epoch 15]: loss 0.6594943225383758
+[2020-07-17 05:39:31,326][nnsvs][INFO] - [dev] [Epoch 15]: loss 0.8692368268966675
+[2020-07-17 05:39:31,550][nnsvs][INFO] - [train_no_dev] [Epoch 16]: loss 0.6022851943969727
+[2020-07-17 05:39:31,618][nnsvs][INFO] - [dev] [Epoch 16]: loss 0.8751500248908997
+[2020-07-17 05:39:31,835][nnsvs][INFO] - [train_no_dev] [Epoch 17]: loss 0.5923206269741058
+[2020-07-17 05:39:31,907][nnsvs][INFO] - [dev] [Epoch 17]: loss 0.8911314606666565
+[2020-07-17 05:39:32,168][nnsvs][INFO] - [train_no_dev] [Epoch 18]: loss 0.4892773449420929
+[2020-07-17 05:39:32,248][nnsvs][INFO] - [dev] [Epoch 18]: loss 1.0003572702407837
+[2020-07-17 05:39:32,486][nnsvs][INFO] - [train_no_dev] [Epoch 19]: loss 0.49792405366897585
+[2020-07-17 05:39:32,557][nnsvs][INFO] - [dev] [Epoch 19]: loss 1.0384490489959717
+[2020-07-17 05:39:32,781][nnsvs][INFO] - [train_no_dev] [Epoch 20]: loss 0.4037866473197937
+[2020-07-17 05:39:32,854][nnsvs][INFO] - [dev] [Epoch 20]: loss 1.3405394554138184
+[2020-07-17 05:39:33,627][nnsvs][INFO] - Checkpoint is saved at /content/drive/Shared drives/台U/NNSVS/Training_data/Kogare/kogare_singing/00-svs-world/exp/kogare/timelag/checkpoint_epoch0020.pth
+[2020-07-17 05:39:34,416][nnsvs][INFO] - [train_no_dev] [Epoch 21]: loss 0.4705799400806427
+[2020-07-17 05:39:34,485][nnsvs][INFO] - [dev] [Epoch 21]: loss 1.084943175315857
+[2020-07-17 05:39:34,707][nnsvs][INFO] - [train_no_dev] [Epoch 22]: loss 0.3895224094390869
+[2020-07-17 05:39:34,780][nnsvs][INFO] - [dev] [Epoch 22]: loss 1.1725876331329346
+[2020-07-17 05:39:35,009][nnsvs][INFO] - [train_no_dev] [Epoch 23]: loss 0.35369681715965273
+[2020-07-17 05:39:35,080][nnsvs][INFO] - [dev] [Epoch 23]: loss 1.1565760374069214
+[2020-07-17 05:39:35,300][nnsvs][INFO] - [train_no_dev] [Epoch 24]: loss 0.3586034834384918
+[2020-07-17 05:39:35,385][nnsvs][INFO] - [dev] [Epoch 24]: loss 1.144632339477539
+[2020-07-17 05:39:35,603][nnsvs][INFO] - [train_no_dev] [Epoch 25]: loss 0.3184975773096085
+[2020-07-17 05:39:35,678][nnsvs][INFO] - [dev] [Epoch 25]: loss 1.1890714168548584
+[2020-07-17 05:39:35,895][nnsvs][INFO] - [train_no_dev] [Epoch 26]: loss 0.2972284138202667
+[2020-07-17 05:39:35,966][nnsvs][INFO] - [dev] [Epoch 26]: loss 1.3348042964935303
+[2020-07-17 05:39:36,212][nnsvs][INFO] - [train_no_dev] [Epoch 27]: loss 0.35392974615097045
+[2020-07-17 05:39:36,283][nnsvs][INFO] - [dev] [Epoch 27]: loss 1.2950913906097412
+[2020-07-17 05:39:36,527][nnsvs][INFO] - [train_no_dev] [Epoch 28]: loss 0.30248388051986697
+[2020-07-17 05:39:36,596][nnsvs][INFO] - [dev] [Epoch 28]: loss 1.3642033338546753
+[2020-07-17 05:39:36,813][nnsvs][INFO] - [train_no_dev] [Epoch 29]: loss 0.2689081370830536
+[2020-07-17 05:39:36,887][nnsvs][INFO] - [dev] [Epoch 29]: loss 1.2516181468963623
+[2020-07-17 05:39:37,126][nnsvs][INFO] - [train_no_dev] [Epoch 30]: loss 0.2943351238965988
+[2020-07-17 05:39:37,198][nnsvs][INFO] - [dev] [Epoch 30]: loss 1.3861602544784546
+[2020-07-17 05:39:37,416][nnsvs][INFO] - [train_no_dev] [Epoch 31]: loss 0.25254869610071184
+[2020-07-17 05:39:37,492][nnsvs][INFO] - [dev] [Epoch 31]: loss 1.4631787538528442
+[2020-07-17 05:39:37,740][nnsvs][INFO] - [train_no_dev] [Epoch 32]: loss 0.22395960092544556
+[2020-07-17 05:39:37,828][nnsvs][INFO] - [dev] [Epoch 32]: loss 1.3411771059036255
+[2020-07-17 05:39:38,061][nnsvs][INFO] - [train_no_dev] [Epoch 33]: loss 0.21140427589416505
+[2020-07-17 05:39:38,132][nnsvs][INFO] - [dev] [Epoch 33]: loss 1.4045326709747314
+[2020-07-17 05:39:38,345][nnsvs][INFO] - [train_no_dev] [Epoch 34]: loss 0.23994296789169312
+[2020-07-17 05:39:38,412][nnsvs][INFO] - [dev] [Epoch 34]: loss 1.4058023691177368
+[2020-07-17 05:39:38,631][nnsvs][INFO] - [train_no_dev] [Epoch 35]: loss 0.2529166042804718
+[2020-07-17 05:39:38,703][nnsvs][INFO] - [dev] [Epoch 35]: loss 1.406650185585022
+[2020-07-17 05:39:38,947][nnsvs][INFO] - [train_no_dev] [Epoch 36]: loss 0.22695451080799103
+[2020-07-17 05:39:39,025][nnsvs][INFO] - [dev] [Epoch 36]: loss 1.4258581399917603
+[2020-07-17 05:39:39,253][nnsvs][INFO] - [train_no_dev] [Epoch 37]: loss 0.2083818182349205
+[2020-07-17 05:39:39,325][nnsvs][INFO] - [dev] [Epoch 37]: loss 1.376685619354248
+[2020-07-17 05:39:39,558][nnsvs][INFO] - [train_no_dev] [Epoch 38]: loss 0.2150288015604019
+[2020-07-17 05:39:39,639][nnsvs][INFO] - [dev] [Epoch 38]: loss 1.514097809791565
+[2020-07-17 05:39:39,877][nnsvs][INFO] - [train_no_dev] [Epoch 39]: loss 0.2062992721796036
+[2020-07-17 05:39:39,948][nnsvs][INFO] - [dev] [Epoch 39]: loss 1.4017053842544556
+[2020-07-17 05:39:40,180][nnsvs][INFO] - [train_no_dev] [Epoch 40]: loss 0.20760393440723418
+[2020-07-17 05:39:40,250][nnsvs][INFO] - [dev] [Epoch 40]: loss 1.455618977546692
+[2020-07-17 05:39:40,901][nnsvs][INFO] - Checkpoint is saved at /content/drive/Shared drives/台U/NNSVS/Training_data/Kogare/kogare_singing/00-svs-world/exp/kogare/timelag/checkpoint_epoch0040.pth
+[2020-07-17 05:39:41,252][nnsvs][INFO] - [train_no_dev] [Epoch 41]: loss 0.20530796349048613
+[2020-07-17 05:39:41,322][nnsvs][INFO] - [dev] [Epoch 41]: loss 1.4606363773345947
+[2020-07-17 05:39:41,548][nnsvs][INFO] - [train_no_dev] [Epoch 42]: loss 0.19260692596435547
+[2020-07-17 05:39:41,624][nnsvs][INFO] - [dev] [Epoch 42]: loss 1.475990891456604
+[2020-07-17 05:39:41,851][nnsvs][INFO] - [train_no_dev] [Epoch 43]: loss 0.17656296789646148
+[2020-07-17 05:39:41,926][nnsvs][INFO] - [dev] [Epoch 43]: loss 1.4721848964691162
+[2020-07-17 05:39:42,165][nnsvs][INFO] - [train_no_dev] [Epoch 44]: loss 0.16684335470199585
+[2020-07-17 05:39:42,232][nnsvs][INFO] - [dev] [Epoch 44]: loss 1.4255927801132202
+[2020-07-17 05:39:42,454][nnsvs][INFO] - [train_no_dev] [Epoch 45]: loss 0.17071760594844818
+[2020-07-17 05:39:42,536][nnsvs][INFO] - [dev] [Epoch 45]: loss 1.4313099384307861
+[2020-07-17 05:39:42,757][nnsvs][INFO] - [train_no_dev] [Epoch 46]: loss 0.14592456370592116
+[2020-07-17 05:39:42,831][nnsvs][INFO] - [dev] [Epoch 46]: loss 1.536790132522583
+[2020-07-17 05:39:43,066][nnsvs][INFO] - [train_no_dev] [Epoch 47]: loss 0.15501901358366013
+[2020-07-17 05:39:43,146][nnsvs][INFO] - [dev] [Epoch 47]: loss 1.5105961561203003
+[2020-07-17 05:39:43,382][nnsvs][INFO] - [train_no_dev] [Epoch 48]: loss 0.15751900523900986
+[2020-07-17 05:39:43,452][nnsvs][INFO] - [dev] [Epoch 48]: loss 1.497361421585083
+[2020-07-17 05:39:43,704][nnsvs][INFO] - [train_no_dev] [Epoch 49]: loss 0.1555655375123024
+[2020-07-17 05:39:43,776][nnsvs][INFO] - [dev] [Epoch 49]: loss 1.478352665901184
+[2020-07-17 05:39:44,100][nnsvs][INFO] - [train_no_dev] [Epoch 50]: loss 0.1533437043428421
+[2020-07-17 05:39:44,176][nnsvs][INFO] - [dev] [Epoch 50]: loss 1.524429440498352
+[2020-07-17 05:39:44,703][nnsvs][INFO] - Checkpoint is saved at /content/drive/Shared drives/台U/NNSVS/Training_data/Kogare/kogare_singing/00-svs-world/exp/kogare/timelag/checkpoint_epoch0050.pth
+[2020-07-17 05:39:44,718][nnsvs][INFO] - The best loss was 0.555372416973114

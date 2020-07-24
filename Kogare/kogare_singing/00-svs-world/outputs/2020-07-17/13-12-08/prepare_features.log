@@ -1,0 +1,31 @@
+[2020-07-17 13:12:08,587][nnsvs][INFO] - acoustic:
+  enabled: true
+  f0_ceil: 650
+  f0_floor: 90
+  frame_period: 5
+  interp_unvoiced_aperiodicity: true
+  label_dir: data/acoustic/label_phone_align
+  mgc_order: 59
+  num_windows: 3
+  question_path: null
+  relative_f0: true
+  subphone_features: coarse_coding
+  use_harvest: true
+  wav_dir: data/acoustic/wav
+duration:
+  enabled: true
+  label_dir: data/duration/label_phone_align
+  question_path: null
+log_f0_conditioning: true
+out_dir: dump/kogare/org/train_no_dev/
+question_path: ./conf/jp_qst001_nnsvs.hed
+timelag:
+  enabled: true
+  label_phone_align_dir: data/timelag/label_phone_align
+  label_phone_score_dir: data/timelag/label_phone_score
+  question_path: null
+utt_list: data/list/train_no_dev.list
+verbose: 100
+
+[2020-07-17 13:12:08,680][nnsvs][INFO] - Timelag linguistic feature dim: 420
+[2020-07-17 13:12:08,683][nnsvs][INFO] - Timelag feature dim: 1

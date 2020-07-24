@@ -1,0 +1,7 @@
+[2020-07-17 08:33:50,127][nnsvs][INFO] - in_dir: dump/kogare/org/eval/out_duration/
+inverse: false
+num_workers: 4
+out_dir: dump/kogare/norm/eval/out_duration/
+scaler_path: dump/kogare/org/out_duration_scaler.joblib
+verbose: 100
+
